@@ -78,8 +78,8 @@ export default function Contact() {
               <p className="font-mono text-xs text-light-5 uppercase tracking-widest mb-4">Find me on</p>
               {[
                 { icon: Mail, label: socialLinks.email, href: `mailto:${socialLinks.email}`, color: '#818cf8' },
-                { icon: Github, label: 'github.com/yourhandle', href: socialLinks.github, color: '#a78bfa' },
-                { icon: Linkedin, label: 'linkedin.com/in/yourname', href: socialLinks.linkedin, color: '#c084fc' },
+                { icon: Github, label: 'github.com/Ayanrinde', href: socialLinks.github, color: '#a78bfa' },
+                { icon: Linkedin, label: 'linkedin.com/in/Ayanrinde Gaius', href: socialLinks.linkedin, color: '#c084fc' },
               ].map(({ icon: Icon, label, href, color }) => (
                 <a key={href} href={href} target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-3 group">

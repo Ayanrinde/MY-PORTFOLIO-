@@ -33,7 +33,7 @@ export const projects = [
     demo: 'https://student-portal-azure-eta.vercel.app',
     featured: true,
     year: '2024',
-    category: 'Web App',
+    category: 'Web App',  
   },
   {
     id: 3,
@@ -145,4 +145,6 @@ export const techBadges = [
 
 export const socialLinks = {
   github: 'https://github.com/Ayanrinde',
-  linkedin: 'https://www.linkedin.com/in/
+  linkedin: 'https://www.linkedin.com/in/ayanrinde-gaius/',
+  email: 'ayanrindegaius005@gmail.com',
+}

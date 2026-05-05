@@ -39,7 +39,7 @@ export default function Projects() {
           className="mt-12 flex justify-center"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/Ayanrinde"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-secondary text-sm"
