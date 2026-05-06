@@ -4,47 +4,70 @@ export const projects = [
     slug: 'local-delivery',
     title: 'SwiftDeliver',
     subtitle: 'Local Delivery Web App',
-    tagline: 'Connecting local businesses with reliable delivery services.',
-    problem: 'Small local businesses in developing communities lack access to affordable, tech-enabled delivery infrastructure. They rely on informal networks that are slow, unreliable, and have zero tracking.',
-    solution: 'A full-featured delivery web app where businesses can post delivery requests, track riders in real time, and manage order history through a clean dashboard.',
-    impact: 'Reduces delivery coordination time by ~60% and gives small businesses the logistics tools previously only available to large enterprises.',
-    tags: ['React', 'CSS Modules', 'JavaScript', 'REST API', 'LocalStorage'],
+    tagline: 'Improving delivery coordination for local businesses.',
+    
+    problem:
+      'Many small businesses rely on manual coordination (calls and messaging apps) for deliveries, which leads to delays, poor tracking, and inefficiency.',
+
+    solution:
+      'Developed a web-based delivery platform where businesses can create delivery requests, monitor order progress, and manage operations through a clean interface.',
+
+    impact:
+      'Streamlined delivery coordination and demonstrated how digital tools can improve efficiency for small businesses.',
+
+    tags: ['React', 'CSS Modules', 'JavaScript', 'REST API'],
     color: '#6366f1',
     colorLight: '#818cf8',
     github: 'https://github.com',
     demo: 'https://demo.com',
     featured: true,
     year: '2024',
-    category: 'Full Stack',
+    category: 'Web Application',
   },
+
   {
     id: 2,
     slug: 'student-portal',
     title: 'ResultVault',
     subtitle: 'Student Result Portal',
-    tagline: 'Transparent academic performance, accessible to all students.',
-    problem: 'Students in many institutions experience unnecessary delays and opacity in accessing their academic results. Physical notice boards and manual checks waste time and breed anxiety.',
-    solution: 'A secure, role-based result portal where students authenticate, view semester results, and download transcripts. Admins can upload and manage results with an intuitive dashboard.',
-    impact: 'Eliminates physical queuing and delayed result checking. Students get instant, secure access to academic records anytime, anywhere.',
-    tags: ['React', 'Tailwind CSS', 'JavaScript', 'JSON API', 'Authentication'],
+    tagline: 'Making academic results accessible and transparent.',
+
+    problem:
+      'Students often face delays and lack of transparency when accessing their academic results, relying on physical notice boards or manual processes.',
+
+    solution:
+      'Built a structured web portal that allows students to securely access results while providing administrators with tools to manage academic data efficiently.',
+
+    impact:
+      'Improved accessibility and reduced dependency on manual result-checking processes.',
+
+    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Authentication'],
     color: '#8b5cf6',
     colorLight: '#a78bfa',
     github: 'https://github.com/Ayanrinde/Student-Portal',
     demo: 'https://student-portal-azure-eta.vercel.app',
     featured: true,
     year: '2024',
-    category: 'Web App',  
+    category: 'Web Application',
   },
+
   {
     id: 3,
     slug: 'business-landing',
     title: 'NovaBrand',
     subtitle: 'Business Landing Page',
-    tagline: 'High-conversion landing pages built for modern businesses.',
-    problem: 'Startups and SMEs lose potential customers due to poorly designed, slow-loading websites that fail to communicate their value proposition effectively.',
-    solution: 'A modular, high-performance landing page template with animated hero sections, social proof elements, pricing tables, and a conversion-optimized CTA flow.',
-    impact: 'Clients reported a 2–3× increase in lead inquiries within the first month. Page speed score consistently above 95 on Lighthouse.',
-    tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite', 'SEO'],
+    tagline: 'Helping businesses communicate value effectively.',
+
+    problem:
+      'Many small businesses struggle with poorly designed websites that fail to clearly communicate their value and convert visitors.',
+
+    solution:
+      'Designed and developed a modern landing page with a strong visual hierarchy, responsive layout, and conversion-focused structure.',
+
+    impact:
+      'Demonstrated how improved UI and structure can enhance user engagement and business presentation.',
+
+    tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Vite'],
     color: '#a855f7',
     colorLight: '#c084fc',
     github: 'https://github.com',
@@ -121,6 +144,7 @@ export const skills = [
       { name: 'Figma / Canva', level: 72 },
       { name: 'VS Code', level: 90 },
       { name: 'Microsoft Excel', level: 75 },
+      { name: 'Google Workspace (Docs, Sheets, Collaboration)', level: 80 },
     ],
   },
   {

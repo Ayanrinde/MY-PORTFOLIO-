@@ -6,7 +6,7 @@ const insights = [
     tag: 'Engineering',
     date: 'Dec 2024',
     title: 'Why I Stopped Following Tutorials and Started Building Real Apps',
-    excerpt: 'The moment I stopped copying code and started solving actual problems, everything changed. Here\'s what I learned.',
+    excerpt: 'Real growth started when I shifted from replicating tutorials to solving real constraints and user problems. Here\'s what I learned.',
     readTime: '4 min read',
     color: '#6366f1',
   },
@@ -41,15 +41,14 @@ export default function Insights() {
           className="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-14 gap-4"
         >
           <div>
-            <span className="section-label">Blog</span>
+            <span className="section-label">Insights</span>
             <h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 leading-tight">
-              Thoughts &{' '}
-              <span className="gradient-text">Insights</span>
-            </h2>
+  How I Think About <span className="gradient-text">Building</span>
+</h2>
           </div>
           <p className="font-body text-light-5 text-sm max-w-xs">
-            Writing about engineering, design, and the journey of becoming a developer.
-          </p>
+  Short reflections on engineering, systems, and problem-solving.
+</p>
         </motion.div>
 
         {/* Cards */}

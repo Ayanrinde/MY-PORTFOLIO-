@@ -4,7 +4,7 @@ import { ArrowUpRight, Clock } from 'lucide-react'
 const posts = [
   {
     tag: 'Engineering',
-    title: 'Why I stopped following tutorials and started building real things',
+    title: 'From Tutorials to Independent Problem Solving',
     excerpt: 'The moment I quit copying code and started asking "what problem does this solve?" is when I actually started growing as a developer.',
     readTime: '4 min read',
     date: 'Nov 2024',
@@ -39,13 +39,14 @@ export default function Blog() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <span className="section-label">Thoughts & Insights</span>
-          <h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 mb-4 leading-tight">
-            Writing <span className="gradient-text">Out Loud</span>
-          </h2>
-          <p className="font-body text-light-4 max-w-xl text-base leading-relaxed">
-            Notes on engineering, design, career, and building things that matter.
-          </p>
+          <span className="section-label">Writing</span>
+<h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 mb-4 leading-tight">
+  Articles & <span className="gradient-text">Perspectives</span>
+</h2>
+
+<p className="font-body text-light-4 max-w-xl text-base leading-relaxed">
+  Deeper explorations of engineering decisions, system design thinking, and my journey toward becoming a software engineer.
+</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

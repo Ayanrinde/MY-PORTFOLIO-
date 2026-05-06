@@ -10,11 +10,14 @@ export default function ProjectCard({ project, index }) {
       transition={{ duration: 0.6, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
       className="group relative glass-hover rounded-2xl overflow-hidden"
     >
-      {/* Top colored accent bar */}
-      <div className="h-0.5 w-full transition-all duration-500 group-hover:h-1"
-        style={{ background: `linear-gradient(90deg, ${project.color}, ${project.colorLight})` }} />
+      {/* Top accent */}
+      <div
+        className="h-0.5 w-full transition-all duration-500 group-hover:h-1"
+        style={{ background: `linear-gradient(90deg, ${project.color}, ${project.colorLight})` }}
+      />
 
       <div className="p-6 lg:p-8">
+
         {/* Header */}
         <div className="flex items-start justify-between mb-5">
           <div>
@@ -25,8 +28,14 @@ export default function ProjectCard({ project, index }) {
               <span className="text-light-5">·</span>
               <span className="font-mono text-xs text-light-5">{project.year}</span>
             </div>
-            <h3 className="font-sans font-bold text-2xl text-light-1 mb-0.5">{project.title}</h3>
-            <p className="text-sm font-body text-light-5">{project.subtitle}</p>
+
+            <h3 className="font-sans font-bold text-2xl text-light-1 mb-0.5">
+              {project.title}
+            </h3>
+
+            <p className="text-sm font-body text-light-5">
+              {project.subtitle}
+            </p>
           </div>
 
           <div className="flex items-center gap-2 shrink-0 ml-4">
@@ -35,7 +44,6 @@ export default function ProjectCard({ project, index }) {
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 hover:bg-white/10 text-light-5 hover:text-light-2 transition-all"
-              aria-label="View GitHub"
             >
               <Github size={14} />
             </a>
@@ -44,7 +52,6 @@ export default function ProjectCard({ project, index }) {
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-lg flex items-center justify-center bg-white/5 hover:bg-white/10 text-light-5 hover:text-light-2 transition-all"
-              aria-label="Live demo"
             >
               <ExternalLink size={14} />
             </a>
@@ -56,41 +63,78 @@ export default function ProjectCard({ project, index }) {
           {project.tagline}
         </p>
 
-        {/* Problem / Solution */}
-        <div className="space-y-3 mb-6">
+        {/* Problem / Solution / Impact */}
+        <div className="space-y-4 mb-6">
+
+          {/* Problem */}
           <div className="flex gap-3">
-            <div className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
-              style={{ backgroundColor: project.colorLight }} />
+            <div
+              className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
+              style={{ backgroundColor: project.colorLight }}
+            />
             <div>
-              <span className="block font-mono text-xs text-light-5 uppercase tracking-wider mb-0.5">Problem</span>
-              <p className="text-xs font-body text-light-4 leading-relaxed line-clamp-2">{project.problem}</p>
+              <span className="block font-mono text-xs text-light-5 uppercase tracking-wider mb-0.5">
+                Problem
+              </span>
+              <p className="text-xs font-body text-light-4 leading-relaxed">
+                {project.problem}
+              </p>
             </div>
           </div>
+
+          {/* Solution */}
           <div className="flex gap-3">
-            <div className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
-              style={{ backgroundColor: project.colorLight }} />
+            <div
+              className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
+              style={{ backgroundColor: project.colorLight }}
+            />
             <div>
-              <span className="block font-mono text-xs text-light-5 uppercase tracking-wider mb-0.5">Solution</span>
-              <p className="text-xs font-body text-light-4 leading-relaxed line-clamp-2">{project.solution}</p>
+              <span className="block font-mono text-xs text-light-5 uppercase tracking-wider mb-0.5">
+                Solution
+              </span>
+              <p className="text-xs font-body text-light-4 leading-relaxed">
+                {project.solution}
+              </p>
             </div>
           </div>
+
+          {/* 🔥 NEW: Impact */}
+          <div className="flex gap-3">
+            <div
+              className="mt-1 shrink-0 w-1.5 h-1.5 rounded-full"
+              style={{ backgroundColor: project.color }}
+            />
+            <div>
+              <span className="block font-mono text-xs text-light-5 uppercase tracking-wider mb-0.5">
+                Impact
+              </span>
+              <p className="text-xs font-body text-light-3 leading-relaxed">
+                {project.impact}
+              </p>
+            </div>
+          </div>
+
         </div>
 
-        {/* Tech tags */}
+        {/* Tech */}
         <div className="flex flex-wrap gap-1.5 mb-6">
           {project.tags.map(tag => (
             <span
               key={tag}
               className="px-2.5 py-1 rounded-lg text-xs font-mono font-medium text-light-4"
-              style={{ background: `${project.color}18`, border: `1px solid ${project.color}28` }}
+              style={{
+                background: `${project.color}18`,
+                border: `1px solid ${project.color}28`,
+              }}
             >
               {tag}
             </span>
           ))}
         </div>
 
-        {/* Footer link */}
-        <div className="flex items-center gap-1 pt-4 border-t border-white/5">
+        {/* Footer CTA */}
+        <div className="flex items-center justify-between pt-4 border-t border-white/5">
+
           <a
             href={project.demo}
             target="_blank"
@@ -98,8 +142,9 @@ export default function ProjectCard({ project, index }) {
             className="flex items-center gap-1 text-xs font-body font-medium transition-all duration-200 hover:gap-2"
             style={{ color: project.colorLight }}
           >
-            View live project <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            Explore project <ArrowUpRight size={13} />
           </a>
+
         </div>
       </div>
     </motion.article>

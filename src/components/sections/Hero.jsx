@@ -49,7 +49,9 @@ export default function Hero() {
           <motion.div variants={item} className="mb-4">
             <h1 className="font-sans font-extrabold text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tight leading-none">
               <span className="text-light-2">Hi, I'm </span>
-              <span className="gradient-text">Gaius</span>
+              <span className="bg-gradient-to-r from-purple-500 to-indigo-500 bg-clip-text text-transparent">
+  Gaius
+</span>
               <span className="block text-light-2 mt-1">Ayanrinde</span>
             </h1>
           </motion.div>
@@ -63,30 +65,29 @@ export default function Hero() {
 
           {/* Tagline */}
           <motion.p
-            variants={item}
-            className="font-body text-xl sm:text-2xl text-light-4 max-w-2xl mx-auto leading-relaxed mb-10 text-balance"
-          >
-            I design{' '}
-            <span className="text-light-2 font-medium">and build web applications</span>{' '}
-            that solve real problems in everyday communities.
-          </motion.p>
+  variants={item}
+  className="font-body text-xl sm:text-2xl text-light-4 max-w-2xl mx-auto leading-relaxed mb-10 text-balance"
+>
+  I design and build web applications that solve real-world problems — 
+  from <span className="text-light-2 font-medium">local delivery systems </span> 
+  to <span className="text-light-2 font-medium">student platforms</span>.
+</motion.p>
+
+<motion.div variants={item} className="mb-10 text-sm text-light-5 space-y-1">
+  <p>✔ Built real-world applications</p>
+  <p>✔ Focused on solving local challenges</p>
+  <p>✔ Available for freelance & collaboration</p>
+</motion.div>
 
           {/* CTAs */}
           <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-14">
-            <a href="#projects" className="btn-primary text-sm px-7 py-3.5">
-              View My Projects
-            </a>
-            <a href="#contact" className="btn-secondary text-sm px-7 py-3.5">
-              Get in Touch
-            </a>
-            <a
-              href="/cv.pdf"
-              target="_blank" rel="noopener noreferrer"
-              className="btn-secondary text-sm px-7 py-3.5"
-            >
-              View CV
-            </a>
-          </motion.div>
+  <a href="#projects" className="btn-primary text-sm px-7 py-3.5">
+    View Projects
+  </a>
+  <a href="#contact" className="btn-secondary text-sm px-7 py-3.5">
+    Contact Me
+  </a>
+</motion.div>
 
           {/* Social links */}
           <motion.div variants={item} className="flex items-center justify-center gap-4 mb-16">
@@ -109,9 +110,9 @@ export default function Hero() {
           {/* Stats row */}
           <motion.div variants={item} className="flex items-center justify-center gap-8 sm:gap-16">
             {[
-              { value: '10+', label: 'Projects Built' },
-              { value: '3+', label: 'Freelance Clients' },
-              { value: '2yrs', label: 'Experience' },
+              { value: '5+', label: 'Projects Built' },
+{ value: 'Real', label: 'Problem Focus' },
+{ value: 'Open', label: 'For Work' },
             ].map(stat => (
               <div key={stat.label} className="text-center">
                 <div className="font-sans font-bold text-2xl sm:text-3xl gradient-text">{stat.value}</div>

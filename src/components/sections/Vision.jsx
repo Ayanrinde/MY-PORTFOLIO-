@@ -47,11 +47,12 @@ export default function Vision() {
         >
           <span className="section-label mx-auto justify-center">Vision & Values</span>
           <h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 mb-5 leading-tight">
-            Building for <span className="gradient-text">Underserved</span> Communities
-          </h2>
+  Engineering Systems That <span className="gradient-text">Expand Access</span>
+</h2>
           <p className="font-body text-light-4 max-w-2xl mx-auto text-base leading-relaxed">
-            I aim to build digital solutions that improve access to services for communities that mainstream tech often overlooks. This is the "why" behind everything I build.
-          </p>
+  I focus on building practical software systems that reduce inefficiencies in everyday environments — 
+  especially in communities where access to digital infrastructure is limited.
+</p>
         </motion.div>
 
         {/* Big quote */}

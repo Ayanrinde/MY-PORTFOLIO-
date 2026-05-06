@@ -12,16 +12,23 @@ function SkillBar({ name, level, color, index }) {
     >
       <div className="flex items-center justify-between mb-1.5">
         <span className="font-body text-sm text-light-3">{name}</span>
-        <span className="font-mono text-xs text-light-5">{level}%</span>
+        <span className="font-mono text-xs text-light-5">Proficient</span>
       </div>
+
       <div className="h-1.5 bg-surface-4 rounded-full overflow-hidden">
         <motion.div
           className="h-full rounded-full"
           initial={{ width: 0 }}
           whileInView={{ width: `${level}%` }}
           viewport={{ once: true }}
-          transition={{ duration: 1, delay: index * 0.07 + 0.2, ease: [0.16, 1, 0.3, 1] }}
-          style={{ background: `linear-gradient(90deg, ${color}aa, ${color})` }}
+          transition={{
+            duration: 1,
+            delay: index * 0.07 + 0.2,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          style={{
+            background: `linear-gradient(90deg, ${color}aa, ${color})`,
+          }}
         />
       </div>
     </motion.div>
@@ -31,23 +38,29 @@ function SkillBar({ name, level, color, index }) {
 export default function Skills() {
   return (
     <section id="skills" className="py-28 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+
+        {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-16 text-center"
         >
           <span className="section-label">Capabilities</span>
+
           <h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 mb-4 leading-tight">
-            Skills & <span className="gradient-text">Expertise</span>
+            Tools I Use to Build <span className="gradient-text">Real Solutions</span>
           </h2>
-          <p className="font-body text-light-4 max-w-xl text-base leading-relaxed">
-            A curated stack built through real projects — not just certifications.
+
+          <p className="font-body text-light-4 max-w-2xl mx-auto text-base leading-relaxed">
+            My skillset is shaped by building real-world projects and continuously learning 
+            modern technologies to expand my capabilities as a developer.
           </p>
         </motion.div>
 
+        {/* Skill Groups */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
           {skills.map((group, gi) => (
             <motion.div
@@ -60,8 +73,11 @@ export default function Skills() {
             >
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-xl">{group.icon}</span>
-                <h3 className="font-sans font-semibold text-light-2 text-base">{group.category}</h3>
+                <h3 className="font-sans font-semibold text-light-2 text-base">
+                  {group.category}
+                </h3>
               </div>
+
               {group.items.map((skill, si) => (
                 <SkillBar
                   key={skill.name}
@@ -75,6 +91,7 @@ export default function Skills() {
           ))}
         </div>
 
+        {/* Tech Stack Marquee */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -82,7 +99,10 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="overflow-hidden"
         >
-          <p className="font-mono text-xs text-light-5 uppercase tracking-widest text-center mb-4">Tech I work with</p>
+          <p className="font-mono text-xs text-light-5 uppercase tracking-widest text-center mb-4">
+            Technologies I work with
+          </p>
+
           <div className="relative">
             <div className="flex gap-3 animate-marquee whitespace-nowrap">
               {[...techBadges, ...techBadges].map((badge, i) => (
@@ -94,10 +114,12 @@ export default function Skills() {
                 </span>
               ))}
             </div>
+
             <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-surface-0 to-transparent pointer-events-none" />
             <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-surface-0 to-transparent pointer-events-none" />
           </div>
         </motion.div>
+
       </div>
     </section>
   )

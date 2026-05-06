@@ -5,48 +5,66 @@ import { projects } from '../../data/projects'
 export default function Projects() {
   return (
     <section id="projects" className="py-28 px-6">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
+        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16"
+          className="mb-16 text-center"
         >
           <span className="section-label">Featured Work</span>
+
           <h2 className="font-sans font-extrabold text-4xl sm:text-5xl text-light-1 mb-4 leading-tight">
-            Projects That <span className="gradient-text">Solve Problems</span>
+            Building Solutions, Not Just <span className="gradient-text">Projects</span>
           </h2>
-          <p className="font-body text-light-4 max-w-xl text-base leading-relaxed">
-            Each project is built around a real need — not just a tutorial. Here's what I've shipped.
+
+          <p className="font-body text-light-4 max-w-2xl mx-auto text-base leading-relaxed">
+            These projects are designed to solve real-world problems — from improving local services 
+            to creating better user experiences. Each one reflects practical thinking, not just tutorials.
           </p>
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
         </div>
 
-        {/* CTA */}
+        {/* Bottom CTA */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4 }}
-          className="mt-12 flex justify-center"
+          className="mt-16 flex flex-col items-center gap-4"
         >
-          <a
-            href="https://github.com/Ayanrinde"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary text-sm"
-          >
-            View all projects on GitHub
-          </a>
+          <p className="text-sm text-light-5">
+            Want to see more or work with me?
+          </p>
+
+          <div className="flex gap-3">
+            <a
+              href="https://github.com/Ayanrinde"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-secondary text-sm"
+            >
+              View GitHub
+            </a>
+
+            <a
+              href="#contact"
+              className="btn-primary text-sm"
+            >
+              Start a Project
+            </a>
+          </div>
         </motion.div>
+
       </div>
     </section>
   )

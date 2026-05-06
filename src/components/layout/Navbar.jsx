@@ -1,24 +1,26 @@
 import { motion } from 'framer-motion'
-import { Sun, Moon, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { useScrollProgress } from '../../hooks/useScrollProgress'
 
 const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Case Study', href: '#case-study' },
+  { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
+  { label: 'Vision', href: '#vision' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar({ theme, toggleTheme }) {
+export default function Navbar() {
   const { scrolled, progress } = useScrollProgress()
   const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <>
-      {/* Scroll progress bar — fixed: added left-0 so it spans full width */}
-      <div className="fixed top-0 left-0 right-0 z-[60] h-0.5 bg-transparent">
+      {/* Scroll progress bar */}
+      <div className="fixed top-0 left-0 right-0 z-[60] h-0.5">
         <motion.div
           className="h-full"
           style={{
@@ -40,16 +42,18 @@ export default function Navbar({ theme, toggleTheme }) {
         style={{ width: 'calc(100% - 3rem)', maxWidth: '68rem' }}
       >
         <div className="flex items-center justify-between px-4 py-3">
-          {/* Logo */}
+
+          {/* Logo (UPGRADED) */}
           <a href="#" className="flex items-center gap-2.5 group shrink-0">
             <div
-              className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-transform group-hover:scale-110"
+              className="w-8 h-8 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110"
               style={{ background: 'linear-gradient(135deg, #6d28d9, #a855f7)' }}
             >
-              <span className="font-sans font-bold text-sm text-white">D</span>
+              <span className="font-sans font-bold text-sm text-white">G</span>
             </div>
+
             <span className="font-sans font-semibold text-light-2 text-base hidden sm:block">
-              DevPortfolio
+              Gaius
             </span>
           </a>
 
@@ -59,26 +63,19 @@ export default function Navbar({ theme, toggleTheme }) {
               <a
                 key={link.href}
                 href={link.href}
-                className="px-3 py-1.5 rounded-lg text-sm font-body text-light-5 hover:text-light-2 hover:bg-white/5 transition-all duration-200 whitespace-nowrap"
+                className="px-3 py-1.5 rounded-lg text-sm font-body text-light-5 hover:text-light-2 hover:bg-white/5 transition-all duration-200"
               >
                 {link.label}
               </a>
             ))}
           </nav>
 
-          {/* Right controls */}
-          <div className="flex items-center gap-1.5 shrink-0">
-            <button
-              onClick={toggleTheme}
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-light-5 hover:text-light-2 hover:bg-white/5 transition-all"
-              aria-label="Toggle theme"
-            >
-              {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
-            </button>
+          {/* Right side */}
+          <div className="flex items-center gap-2">
 
             <a
               href="#contact"
-              className="btn-primary hidden md:inline-flex py-2 px-4 text-sm whitespace-nowrap"
+              className="btn-primary hidden md:inline-flex py-2 px-4 text-sm"
             >
               Hire Me
             </a>
@@ -109,6 +106,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 {link.label}
               </a>
             ))}
+
             <a
               href="#contact"
               onClick={() => setMobileOpen(false)}

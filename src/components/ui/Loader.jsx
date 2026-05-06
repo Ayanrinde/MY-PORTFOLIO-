@@ -1,71 +1,83 @@
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
 export default function Loader({ onComplete }) {
-  const [count, setCount] = useState(0)
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
+    let start = 0
+
     const interval = setInterval(() => {
-      setCount(prev => {
-        if (prev >= 100) {
-          clearInterval(interval)
-          setTimeout(onComplete, 400)
-          return 100
-        }
-        return prev + 2
-      })
-    }, 20)
+      start += Math.random() * 8 // more organic movement
+
+      if (start >= 100) {
+        start = 100
+        clearInterval(interval)
+
+        setTimeout(() => {
+          onComplete()
+        }, 500)
+      }
+
+      setProgress(Math.floor(start))
+    }, 60)
+
     return () => clearInterval(interval)
   }, [onComplete])
 
   return (
     <motion.div
       className="fixed inset-0 z-[999] flex flex-col items-center justify-center bg-surface-0"
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.6, ease: 'easeInOut' }}
+      exit={{ opacity: 0, scale: 1.02 }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
     >
-      {/* Logo mark */}
+      {/* Logo / Identity */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5 }}
-        className="mb-10"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-10 text-center"
       >
-        <div className="w-16 h-16 rounded-2xl flex items-center justify-center relative"
-          style={{ background: 'linear-gradient(135deg, #6d28d9, #a855f7)' }}>
-          <span className="font-sans font-bold text-2xl text-white">D</span>
-          <div className="absolute inset-0 rounded-2xl animate-glow"
-            style={{ background: 'linear-gradient(135deg, #6d28d9, #a855f7)', filter: 'blur(12px)', opacity: 0.4, zIndex: -1 }} />
-        </div>
+        <h1 className="font-sans font-extrabold text-3xl text-light-1 tracking-tight">
+          <span className='gradient-text'> Gaius </span>  
+          Ayanrinde
+        </h1>
+
+        <p className="font-mono text-xs text-light-5 mt-1 tracking-widest uppercase">
+          Frontend Engineer
+        </p>
       </motion.div>
 
       {/* Counter */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="font-mono text-5xl font-medium text-light-4 mb-8 tabular-nums"
+        key={progress}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="font-mono text-4xl text-light-4 mb-6 tabular-nums"
       >
-        {String(count).padStart(3, '0')}
+        {String(progress).padStart(3, '0')}
       </motion.div>
 
       {/* Progress bar */}
-      <div className="w-48 h-px bg-surface-4 relative overflow-hidden rounded-full">
+      <div className="w-56 h-[2px] bg-surface-4 rounded-full overflow-hidden">
         <motion.div
-          className="absolute inset-y-0 left-0 loader-bar"
-          style={{ width: `${count}%` }}
-          transition={{ duration: 0.1 }}
+          className="h-full"
+          style={{
+            width: `${progress}%`,
+            background: 'linear-gradient(90deg, #6d28d9, #a855f7)',
+          }}
+          transition={{ duration: 0.4 }}
         />
       </div>
 
-      {/* Label */}
+      {/* Message */}
       <motion.p
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
+        transition={{ delay: 0.6 }}
         className="mt-6 font-mono text-xs text-light-5 tracking-widest uppercase"
       >
-        Loading experience
+        Preparing something meaningful
       </motion.p>
     </motion.div>
   )
