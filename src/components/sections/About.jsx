@@ -91,7 +91,7 @@ export default function About() {
               </div>
 
               <a
-                href="Public/resume.pdf"
+                href="cv.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-secondary text-sm px-7 py-3.5"
