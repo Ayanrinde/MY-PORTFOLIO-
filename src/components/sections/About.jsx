@@ -91,7 +91,7 @@ export default function About() {
               </div>
 
               <a
-  href="/cv.pdf"
+  href="/gaius-resume.pdf"
   download
   className="btn-secondary text-sm px-7 py-3.5"
 >
