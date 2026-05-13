@@ -69,13 +69,13 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/Ayanrinde/MY-PORTFOLIO-.git
 ```
 
 Navigate into the project folder:
 
 ```bash
-cd YOUR_REPOSITORY
+cd MY-PORTFOLIO-
 ```
 
 Install dependencies:
@@ -134,13 +134,13 @@ This portfolio was designed to:
 # 📬 Contact
 
 ## Email
-your@email.com
+ayanrindegaius005@gmail.com
 
 ## LinkedIn
-https://linkedin.com/in/yourprofile
+https://linkedin.com/in/ayanrinde-gaius
 
 ## GitHub
-https://github.com/yourusername
+https://github.com/Ayanrinde
 
 ---
 
