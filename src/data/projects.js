@@ -1,29 +1,29 @@
 export const projects = [
   {
-    id: 1,
-    slug: 'local-delivery',
-    title: 'SwiftDeliver',
-    subtitle: 'Local Delivery Web App',
-    tagline: 'Improving delivery coordination for local businesses.',
-    
-    problem:
-      'Many small businesses rely on manual coordination (calls and messaging apps) for deliveries, which leads to delays, poor tracking, and inefficiency.',
+  id: 1,
+  slug: 'personal-finance-intelligence',
+  title: 'Personal Finance Intelligence',
+  subtitle: 'Personal Finance Dashboard',
+  tagline: 'Turning personal financial data into clear, actionable insights.',
 
-    solution:
-      'Developed a web-based delivery platform where businesses can create delivery requests, monitor order progress, and manage operations through a clean interface.',
+  problem:
+    'Managing personal finances can become difficult when income, expenses, spending patterns, and financial goals are scattered across different records without a clear way to understand the bigger picture.',
 
-    impact:
-      'Streamlined delivery coordination and demonstrated how digital tools can improve efficiency for small businesses.',
+  solution:
+    'Built a responsive personal finance application that organizes financial information into an intuitive dashboard, helping users track their finances, understand spending patterns, and make more informed financial decisions.',
 
-    tags: ['React', 'CSS Modules', 'JavaScript', 'REST API'],
-    color: '#6366f1',
-    colorLight: '#818cf8',
-    github: 'https://github.com',
-    demo: 'https://demo.com',
-    featured: true,
-    year: '2024',
-    category: 'Web Application',
-  },
+  impact:
+    'Demonstrated how a modern web application can transform raw financial information into a clear and practical experience for personal financial management.',
+
+  tags: ['JavaScript', 'CSS', 'Vercel'],
+  color: '#6366f1',
+  colorLight: '#818cf8',
+  github: 'https://github.com/Ayanrinde/Personal-Finance-Intelligence-',
+  demo: 'https://personal-finance-intelligence-green.vercel.app/',
+  featured: true,
+  year: '2026',
+  category: 'Web Application',
+},
 
   {
     id: 2,
