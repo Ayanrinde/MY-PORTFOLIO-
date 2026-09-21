@@ -26,30 +26,30 @@ export const projects = [
 },
 
   {
-    id: 2,
-    slug: 'student-portal',
-    title: 'ResultVault',
-    subtitle: 'Student Result Portal',
-    tagline: 'Making academic results accessible and transparent.',
+  id: 2,
+  slug: 'weather-app',
+  title: 'Weather App',
+  subtitle: 'Real-Time Weather Application',
+  tagline: 'Making weather information simple, accessible, and easy to understand.',
 
-    problem:
-      'Students often face delays and lack of transparency when accessing their academic results, relying on physical notice boards or manual processes.',
+  problem:
+    'Weather information can be difficult to interpret when users have to navigate through complex platforms or search across multiple sources to find current conditions.',
 
-    solution:
-      'Built a structured web portal that allows students to securely access results while providing administrators with tools to manage academic data efficiently.',
+  solution:
+    'Built a responsive weather application that allows users to search for locations and view current weather conditions, temperature, weather icons, and other essential information through a clean and intuitive interface.',
 
-    impact:
-      'Improved accessibility and reduced dependency on manual result-checking processes.',
+  impact:
+    'Created a simple and responsive experience for accessing real-time weather information while demonstrating practical use of external APIs and dynamic data rendering.',
 
-    tags: ['React', 'Tailwind CSS', 'JavaScript', 'Authentication'],
-    color: '#8b5cf6',
-    colorLight: '#a78bfa',
-    github: 'https://github.com/Ayanrinde/Student-Portal',
-    demo: 'https://student-portal-azure-eta.vercel.app',
-    featured: true,
-    year: '2024',
-    category: 'Web Application',
-  },
+  tags: ['JavaScript', 'CSS', 'OpenWeather API'],
+  color: '#8b5cf6',
+  colorLight: '#a78bfa',
+  github: 'https://github.com/Ayanrinde/Weather-App',
+  demo: 'https://weather-app-omega-18.vercel.app/',
+  featured: true,
+  year: '2024',
+  category: 'Web Application',
+},
 
   {
     id: 3,
